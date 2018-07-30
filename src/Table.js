@@ -5,9 +5,9 @@ const largeColumn = { width: "40%" };
 const middleColumn = { width: "30%" };
 const smallColumn = { width: "10%" };
 
-const Table = ({ list, pattern, removeItem, isSearched }) => (
+const Table = ({ list, removeItem }) => (
   <div className="table">
-    {list.filter(isSearched(pattern)).map(item => (
+    {list.map(item => (
       <div key={item.objectID} className="table-row">
         <span style={largeColumn}>
           <a href={item.url}>{item.title}</a>
